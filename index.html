@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script> -->
+    <!-- <script src="index.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/1.7.5/dc.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="http://dc-js.github.io/dc.js/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://dc-js.github.io/dc.js/css/dc.css"/>
+    <link rel="icon" type="image/x-icon" href="http://dc-js.github.io/dc.js/dc.logo.png"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/flatly/bootstrap.css" /> -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello world</h1>
+
+      <div id="gain-loss-chart">
+	<span>Gain Loss Chart</span>
+	<a class="reset" href="javascript:gainCollChart.filterAll(); dc.redrawAll();" style="visibility: hidden;">reset</a>
+	<span class="reset" style="visibility: hidden;">
+	  Current filter: <span class="filter"></span>
+	</span>
+      </div>
+      <div id="fluctuation-chart" class="dc-chart"><span>Fluctuation Chart</span></div>
+      <div id="quarter-chart"><span>Quarter Chart</span></div>
+      <div id="day-of-week-chart"><span>Day of Week Chart</span></div>
+      <div id="monthly-move-chart"><span>Monthly Move Chart</span></div>
+      <div id="monthly-volumne-chart"><span>Monthly Volumn Chart</span></div>
+      <!-- <div id="yearly-bubble-chart"><span>Yearly Bubble Chart</span></div> -->
+      <div class="dc-data-count"><span>Data Count</span></div>
+      <div class="dc-data-table"><span>Data Table</span></div>
+
+
+      <div class="row">
+	<div id="yearly-bubble-chart" class="dc-chart">
+	  <strong>Yearly Performance</strong> (radius: fluctuation/index ratio, color: gain/loss)
+	  <a class="reset" href="javascript:yearlyBubbleChart.filterAll();dc.redrawAll();"
+	     style="display: none;">reset</a>
+	  
+	  <div class="clearfix"></div>
+	</div>
+      </div>
+      
+    </div>
+
+
+    <script src="http://dc-js.github.io/dc.js/js/d3.js"></script>
+    <script src="http://dc-js.github.io/dc.js/js/crossfilter.js"></script>
+    <script src="http://dc-js.github.io/dc.js/js/dc.js"></script>
+    <script src="http://dc-js.github.io/dc.js/js/colorbrewer.js"></script>
+    <script src="dc_getting_started.js"></script>
+    <!-- <script src="http://dc-js.github.io/dc.js/stock.js"></script> -->
+    
+  </body>
+</html>
